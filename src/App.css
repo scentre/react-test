@@ -1,0 +1,15 @@
+/* fonts.css */
+@font-face {
+  font-family: "circular-std";
+  src: url("./assets/circular-std-medium-500.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "circular-std", sans-serif;
+}
+
+nav a.active {
+  color: green;
+}
