@@ -31,8 +31,15 @@ interface BudgetContent {
   name: string;
   icon: string;
 }
-const TabsComponent = ({ tabName, setTabName }) => {
+const TabsComponent = ({
+  tabName,
+  setTabName,
+}: {
+  tabName: string;
+  setTabName: (a: string) => void;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
+  console.log(tabName);
 
   const handleClick = () => {
     setIsOpen(true);

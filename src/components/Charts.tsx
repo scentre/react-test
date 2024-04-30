@@ -1,6 +1,5 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { useState } from "react";
-import { PieChart, Pie, Cell, ResponsiveContainer, Label } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
 const data = [
   { name: "Group A", value: 400, index: 0 },

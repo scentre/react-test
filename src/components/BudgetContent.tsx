@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Text } from "@chakra-ui/react";
+import { Box, Icon, Text } from "@chakra-ui/react";
 
 import TabsComponent from "./Tabs";
 import OptionsList from "./OptionsList";
