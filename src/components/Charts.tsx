@@ -25,7 +25,7 @@ const Charts = () => {
             paddingAngle={5}
             dataKey="value"
           >
-            {data.map((entry, index) => (
+            {data.map((_, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index]} />
             ))}
             {/* {data.map((entry, index) => (

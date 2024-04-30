@@ -26,7 +26,7 @@ const Form = () => {
     budget: 20,
   });
 
-  const [expenseArray, setExpenseArray] = useState([]);
+  const [expenseArray, setExpenseArray] = useState<ExpenseData[]>([]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
