@@ -26,6 +26,11 @@ import Charts from "./Charts";
 
 import food from "../assets/food.svg";
 import savings from "../assets/savings.svg";
+
+interface BudgetContent {
+  name: string;
+  icon: string;
+}
 const TabsComponent = ({ tabName, setTabName }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -37,11 +42,16 @@ const TabsComponent = ({ tabName, setTabName }) => {
     setIsOpen(false);
   };
 
-  const budgetContent = [
+  const budgetContent: BudgetContent[] = [
     { name: "Food and Drink", icon: food },
     { name: "Savings", icon: savings },
   ];
-  const Overlay = ({ isOpen, onClose }) => {
+
+  interface iOverlay {
+    isOpen: boolean;
+    onClose: () => void;
+  }
+  const Overlay = ({ isOpen, onClose }: iOverlay) => {
     return (
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />

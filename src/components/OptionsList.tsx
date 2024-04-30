@@ -2,7 +2,7 @@ import { Flex, Icon, Text } from "@chakra-ui/react";
 
 import { FaNairaSign } from "react-icons/fa6";
 
-const OptionsList = ({ text }) => {
+const OptionsList = ({ text }: { text: string }) => {
   return (
     <Flex alignItems={"center"} gap={"1"}>
       <Icon

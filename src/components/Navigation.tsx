@@ -6,9 +6,14 @@ import { VscRepoPush } from "react-icons/vsc";
 import { IoChatbubbleOutline } from "react-icons/io5";
 import { BsBarChart } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
-const navigation = [
+interface NavigationItem {
+  icon: React.ElementType;
+  name: string;
+  link: string;
+}
+const navigation: NavigationItem[] = [
   {
     icon: AiOutlineHome,
     name: "Home",

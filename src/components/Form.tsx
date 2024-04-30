@@ -14,7 +14,13 @@ import { useState } from "react";
 import { BiPlusCircle } from "react-icons/bi";
 const Form = () => {
   const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({
+
+  interface ExpenseData {
+    amount: string;
+    expense: string;
+    budget: number;
+  }
+  const [formData, setFormData] = useState<ExpenseData>({
     amount: "",
     expense: "",
     budget: 20,
@@ -22,7 +28,9 @@ const Form = () => {
 
   const [expenseArray, setExpenseArray] = useState([]);
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
